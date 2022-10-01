@@ -140,6 +140,6 @@ app.post('/api/addsignup',function(req,res){
 app.get('/*',function(req,res){
     res.sendFile(path.join(__dirname+'/dist/libapp/index.html'));
   })
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('listening to port 3000');
 });
